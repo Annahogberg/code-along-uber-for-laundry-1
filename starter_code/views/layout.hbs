@@ -8,6 +8,18 @@
     <header>
       <h1> <a href="/"> {{title}} </a> </h1>
     </header>
+    <nav>
+    <ul>
+      {{#if user}}
+      <li> <a href="/laundry/launderers"> Find a Launderer </a> </li>
+      <li> <a href="/laundry/dashboard"> See Dashboard </a> </li>
+      <li> <a href="/auth/logout"> Log Out </a> </li>
+      {{else}}
+      <li> <a href="/auth/signup"> Sign Up </a> </li>
+      <li> <a href="/auth/login"> Log In </a> </li>
+      {{/if}}
+    </ul>
+  </nav>
     {{{body}}}
     <footer>
       <p> Made with &hearts; at Ironhack. </p>
